@@ -94,7 +94,7 @@ lightgallery: true
 ruby: true
 fraction: true
 fontawesome: true
-linkToMarkdown: true
+linkToMarkdown: false
 rssFullText: false
 
 toc:
