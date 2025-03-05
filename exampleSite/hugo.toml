@@ -2,7 +2,7 @@ baseURL = "https://example.com"
 
 # theme
 # 主题
-theme = "LoveIt"
+theme = "loveIt"
 # themes directory
 # 主题目录
 themesDir = "../.."
@@ -464,7 +464,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # 文章页面的分享信息设置
     [params.page.share]
       enable = true
-      Twitter = true
+      Twitter = false
       Facebook = true
       Linkedin = false
       Whatsapp = false
@@ -763,7 +763,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [privacy.googleAnalytics]
     # ...
   [privacy.twitter]
-    enableDNT = true
+    enableDNT = false
   [privacy.youtube]
     privacyEnhanced = true
 
