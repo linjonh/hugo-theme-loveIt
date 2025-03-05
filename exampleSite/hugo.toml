@@ -290,7 +290,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.social]
     GitHub = ""
     Linkedin = ""
-    Twitter = ""
+    X = ""
     Instagram = ""
     Facebook = ""
     Telegram = ""
@@ -763,9 +763,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [privacy.googleAnalytics]
     # ...
   [privacy.twitter]
-    enableDNT = false
+    # ...
   [privacy.youtube]
-    privacyEnhanced = true
+    # ...
 
 # Options to make output .md files
 # 用于输出 Markdown 格式文档的设置
@@ -873,7 +873,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           disclaimer = ""
       [languages.en.params.social]
         GitHub = "xxxx"
-        Twitter = "xxxx"
+        X = "xxxx"
         Instagram = "xxxx"
         Facebook = "xxxx"
         Telegram = "xxxx"
