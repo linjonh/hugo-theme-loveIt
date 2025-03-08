@@ -1,19 +1,18 @@
 # Translations for English
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 # === baseof ==
 [backToTop]
 other = "Back to Top"
 
 [viewComments]
 other = "View Comments"
-# === baseof ==
 
+# === baseof ==
 # === Post ===
 [posts]
 other = "Posts"
-# === Post ===
 
+# === Post ===
 # === Taxonomy ===
 [allSome]
 other = "All {{ .Some }}"
@@ -29,26 +28,26 @@ other = "Category"
 
 [categories]
 other = "Categories"
-# === Taxonomy ===
 
+# === Taxonomy ===
 # === Pagination ===
 [more]
 other = "More"
-# === Pagination ===
 
+# === Pagination ===
 # === partials/header.html ===
 [selectLanguage]
 other = "Select Language"
 
 [switchTheme]
 other = "Switch Theme"
-# === partials/header.html ===
 
+# === partials/header.html ===
 # === partials/footer.html ===
 [poweredBySome]
 other = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
-# === partials/footer.html ===
 
+# === partials/footer.html ===
 # === partials/comment.html ===
 [valineLang]
 other = "en"
@@ -61,8 +60,8 @@ other = "en_US"
 
 [giscusLang]
 other = "en"
-# === partials/comment.html ===
 
+# === partials/comment.html ===
 # === partials/assets.html ===
 [search]
 other = "Search"
@@ -93,13 +92,13 @@ other = "Got it!"
 
 [cookieconsentLink]
 other = "Learn more"
-# === partials/assets.html ===
 
+# === partials/assets.html ===
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Share on"
-# === partials/plugin/share.html ===
 
+# === partials/plugin/share.html ===
 # === posts/single.html ===
 [contents]
 other = "Contents"
@@ -138,16 +137,16 @@ other = "Home"
 
 [readMore]
 other = "Read More"
-# === posts/single.html ===
 
+# === posts/single.html ===
 # === 404.html ===
 [pageNotFound]
 other = "Page not found"
 
 [pageNotFoundText]
 other = "The page you're looking for doesn't exist. Sorry."
-# === 404.html ===
 
+# === 404.html ===
 # === shortcodes/admonition.html ===
 [note]
 other = "Note"
@@ -184,8 +183,8 @@ other = "Example"
 
 [quote]
 other = "Quote"
-# === shortcodes/admonition.html ===
 
+# === shortcodes/admonition.html ===
 # === shortcodes/version.html ===
 [new]
 other = "NEW"
@@ -198,4 +197,11 @@ other = "DELETED"
 
 [deprecated]
 other = "DEPRECATED"
+
 # === shortcodes/version.html ===
+
+[update_found]
+other = "A new version of content is available."
+
+[update]
+other = "Update"

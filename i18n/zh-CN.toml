@@ -1,20 +1,19 @@
 # Translations for Simplified Chinese
 # 简体中文的翻译
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 # === baseof ==
 [backToTop]
 other = "回到顶部"
 
 [viewComments]
 other = "查看评论"
-# === baseof ==
 
+# === baseof ==
 # === Post ===
 [posts]
 other = "文章"
-# === Post ===
 
+# === Post ===
 # === Taxonomy ===
 [allSome]
 other = "所有{{ .Some }}"
@@ -30,26 +29,26 @@ other = "分类"
 
 [categories]
 other = "分类"
-# === Taxonomy ===
 
+# === Taxonomy ===
 # === Pagination ===
 [more]
 other = "更多"
-# === Pagination ===
 
+# === Pagination ===
 # === partials/header.html ===
 [selectLanguage]
 other = "选择语言"
 
 [switchTheme]
 other = "切换主题"
-# === partials/header.html ===
 
+# === partials/header.html ===
 # === partials/footer.html ===
 [poweredBySome]
 other = "由 {{ .Hugo }} 强力驱动 | 主题 - {{ .Theme }}"
-# === partials/footer.html ===
 
+# === partials/footer.html ===
 # === partials/comment.html ===
 [valineLang]
 other = "zh-CN"
@@ -62,8 +61,8 @@ other = "zh_CN"
 
 [giscusLang]
 other = "zh-CN"
-# === partials/comment.html ===
 
+# === partials/comment.html ===
 # === partials/assets.html ===
 [search]
 other = "搜索"
@@ -100,13 +99,13 @@ other = "同意"
 
 [cookieconsentLink]
 other = "了解更多"
-# === partials/assets.html ===
 
+# === partials/assets.html ===
 # === partials/plugin/share.html ===
 [shareOn]
 other = "分享到"
-# === partials/plugin/share.html ===
 
+# === partials/plugin/share.html ===
 # === posts/single.html ===
 [contents]
 other = "目录"
@@ -143,16 +142,16 @@ other = "主页"
 
 [readMore]
 other = "阅读全文"
-# === posts/single.html ===
 
+# === posts/single.html ===
 # === 404.html ===
 [pageNotFound]
 other = "页面没找到"
 
 [pageNotFoundText]
 other = "抱歉，您要查找的页面不存在。"
-# === 404.html ===
 
+# === 404.html ===
 # === shortcodes/admonition.html ===
 [note]
 other = "注意"
@@ -189,8 +188,8 @@ other = "示例"
 
 [quote]
 other = "引用"
-# === shortcodes/admonition.html ===
 
+# === shortcodes/admonition.html ===
 # === shortcodes/version.html ===
 [new]
 other = "新增"
@@ -203,4 +202,10 @@ other = "删除"
 
 [deprecated]
 other = "弃用"
+
 # === shortcodes/version.html ===
+[update_found]
+other = "发现新版本的内容。"
+
+[update]
+other = "更新"

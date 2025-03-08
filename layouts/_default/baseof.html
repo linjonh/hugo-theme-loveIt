@@ -11,6 +11,14 @@
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
+        {{ if eq hugo.Environment "production" }}
+          {{ if .Site.Params.pwa.enabled }}
+            <script
+              defer
+              src="{{ "./app.min.js" | relURL }}?baseurl={{ .Site.Params.BaseURL | default "" }}&register={{ .Site.Params.pwa.cache.enabled }}"
+            ></script>
+          {{ end }}
+        {{ end }}
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
         {{- /* Check theme isDark before body rendering */ -}}
@@ -46,5 +54,9 @@
 
         {{- /* Load JavaScript scripts and CSS */ -}}
         {{- partial "assets.html" . -}}
+
+        {{- /* Load alter notification dialog */ -}}
+        {{- partial "notification.html" . -}}
+
     </body>
 </html>

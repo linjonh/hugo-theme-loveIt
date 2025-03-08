@@ -1,19 +1,26 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
+{{$BaseURL:= .Site.Params.BaseURL}}
+{{- with .Site.Params.BaseURL -}}
+    {{- $BaseURL := . -}}
+{{- else -}}
+    {{- $BaseURL :="" -}}
+{{- end -}}
 
 {{- if not .Site.Params.app.noFavicon -}}
     {{- with .Site.Params.app.svgFavicon -}}
         <link rel="icon" href="{{ . }}">
     {{- else -}}
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ $BaseURL }}/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ $BaseURL }}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{  $BaseURL  }}/favicon-16x16.png">
     {{- end -}}
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{  $BaseURL }}/apple-touch-icon.png">
     {{- with .Site.Params.app.iconColor -}}
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ . }}">
+        <link rel="mask-icon" href="{{ $BaseURL }}/safari-pinned-tab.svg" color="{{ . }}">
     {{- end -}}
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="{{  $BaseURL  }}/site.webmanifest">
+    <link rel="test" href="{{  $BaseURL  }}">
 {{- end -}}
 
 <link rel="canonical" href="{{ .Permalink }}" />
