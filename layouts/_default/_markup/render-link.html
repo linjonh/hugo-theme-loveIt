@@ -1,7 +1,21 @@
 {{- $destination := .Destination -}}
-{{- $resource := .Page.Resources.GetMatch $destination -}}
-{{- if $resource -}}
-    {{- $destination = $resource.RelPermalink -}}
+{{- /* 修正 HTML 转义问题 */ -}}
+{{- $destination = replace $destination "&amp;" "&" -}}
+
+{{- /* 移除方括号（如果存在）*/ -}}
+{{- $destination = replace $destination "[" "(" -}}
+{{- $destination = replace $destination "]" ")" -}}
+
+{{- if not (urls.Parse $destination) -}}
+    {{- warnf "Invalid URL detected: %s" $destination -}}
+{{- else -}}
+    {{- $resource := .Page.Resources.GetMatch $destination -}}
+    {{- if $resource -}}
+        {{- warnf "GetMatch resource= %s on page %s" $resource .Page.File.Path -}}
+        {{- $destination = $resource.RelPermalink -}}
+    {{else}}
+        {{- warnf "not GetMatch resource= %s on page %s" $resource .Page.File.Path -}}
+    {{- end -}}
+    {{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
+    {{- partial "plugin/a.html" $options -}}
 {{- end -}}
-{{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
-{{- partial "plugin/a.html" $options -}}
