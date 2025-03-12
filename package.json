@@ -11,7 +11,11 @@
     "browserify": "^17.0.1",
     "core-js": "^3.40.0",
     "husky": "^9.1.7",
-    "segmentit": "^2.0.3"
+    "segmentit": "^2.0.3",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.34.9"
   },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
@@ -25,20 +29,26 @@
     "hugo-server-development": "hugo server --source exampleSite --buildDrafts --disableFastRender --environment development",
     "hugo-server-production": "hugo server --source exampleSite --minify --disableFastRender --environment production",
     "htmlproofer": "htmlproofer exampleSite/public --disable-external true --ignore-missing-alt true",
-    "copy-resources": "cp -rf exampleSite/resources ."
+    "copy-resources": "cp -rf exampleSite/resources .",
+    "build": "hugo build -gc --minify",
+    "build:js": "rollup --config"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dillonzq/LoveIt.git"
+   "url": "git+https://github.com/linjonh/hugo-theme-loveIt.git"
   },
   "keywords": [
     "hugo",
-    "theme"
+    "theme",
+    "blog"
   ],
-  "author": "Dillon",
+  "author": "linjonh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dillonzq/LoveIt/issues"
+    "url": "https://github.com/linjonh/hugo-theme-loveIt.git/issues"
   },
-  "homepage": "https://github.com/dillonzq/LoveIt#readme"
+  "homepage": "https://github.com/linjonh/hugo-theme-loveIt.gitt#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
