@@ -17,8 +17,7 @@
         <script defer src='{{ "app.min.js" | relURL }}?baseurl={{ .Site.Params.BaseURL | default "" }}&register={{ .Site.Params.pwa.cache.enabled }}'></script>
         {{ end }}
     {{ end }}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5363852791482518"
-     crossorigin="anonymous"></script>
+    {{- partial "partials/head_custom.html" . -}}
 </head>
 
 <body data-header-desktop="{{ .Site.Params.header.desktopMode }}"
@@ -59,6 +58,9 @@
 
     {{- /* Load alter notification dialog */ -}}
     {{- partial "notification.html" . -}}
+
+    
+    {{- partial "partials/footer_custom.html" . -}}
 </body>
 
 </html>

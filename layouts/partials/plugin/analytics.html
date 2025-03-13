@@ -1,4 +1,5 @@
 {{- $analytics := .Scratch.Get "analytics" | default dict -}}
+{{warnf "analytics %s" $analytics}}
 
 {{- if $analytics.enable -}}
     {{- /* Google Analytics */ -}}
