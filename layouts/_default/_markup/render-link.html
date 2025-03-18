@@ -5,17 +5,23 @@
 {{- /* 移除方括号（如果存在）*/ -}}
 {{- $destination = replace $destination "[" "(" -}}
 {{- $destination = replace $destination "]" ")" -}}
+{{- $destination = replace $destination " " "" -}}
+{{- $destination = replace $destination "%20" "" -}}
+{{- $destination = replace $destination "https://link.zhihu.com/?target=" "" -}}
+{{- $destination = replace $destination "%2522%2520%255Ct%2520%2522https%3A//zhuanlan.zhihu.com/p/_blank" "" -}}
+{{/*  {{- $isValidURL := findRE `^(https?):\/\/([a-zA-Z0-9.-]+)(:(\d+))?\/([a-zA-Z0-9\/\-_\.]*)\??([a-zA-Z0-9=&_]+)?(\#[a-zA-Z0-9\-_]+)?$` $destination -}}  */}}
 
-{{- if not (urls.Parse $destination) -}}
+
+{{/*  {{- if not $isValidURL -}}
     {{- warnf "Invalid URL detected: %s" $destination -}}
-{{- else -}}
+{{- else -}}  */}}
     {{- $resource := .Page.Resources.GetMatch $destination -}}
     {{- if $resource -}}
         {{- warnf "GetMatch resource= %s on page %s" $resource .Page.File.Path -}}
         {{- $destination = $resource.RelPermalink -}}
+        {{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
+        {{- partial "plugin/a.html" $options -}}
     {{else}}
         {{- warnf "not GetMatch resource= %s on page %s" $resource .Page.File.Path -}}
     {{- end -}}
-    {{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
-    {{- partial "plugin/a.html" $options -}}
-{{- end -}}
+{{/*  {{- end -}}  */}}
