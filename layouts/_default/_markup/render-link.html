@@ -22,6 +22,6 @@
         {{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
         {{- partial "plugin/a.html" $options -}}
     {{else}}
-        {{- warnf "not GetMatch resource= %s on page %s" $resource .Page.File.Path -}}
+        {{/*  {{- warnf "not GetMatch resource= %s on page %s" $resource .Page.File.Path -}}  */}}
     {{- end -}}
 {{/*  {{- end -}}  */}}
